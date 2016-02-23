@@ -50,6 +50,22 @@ Instructions
     </files>
 </package>
 ```
+	5) Replace information in tags with project spesific one.
+		* Add dependencies if your project requires them, otherwise comment out dependency tag. 
+		  You can find dependencies in “packages.config”. 
+		* Make sure to read Licence file and sign it at the end (line 189) or pick a licence that suits your needs.
+		* Intergen use: Do not modify Owners, LicenseUrl, IconUrl, Copyright. Licence is already signed.
+	
+	6) Follow these [GitHub Instructions](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) to push local repository to git repository **or** execute the following commands:
+
+```git
+git init
+git add .
+git commit -m "Created project"
+git remote add origin YourGithubURL
+git push origin master
+
+```
 
 
 
