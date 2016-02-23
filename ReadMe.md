@@ -82,7 +82,7 @@ git push origin master
 ![image](ReadMe_Images/StartOfTheBuild.PNG)
 
 11) If everything has been setup correctly your build succeeds and your NuGet gets published.
-
+![image](ReadMe_Images/BuildSucceded.PNG)
 
 
 Credits
