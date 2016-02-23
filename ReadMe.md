@@ -18,10 +18,14 @@ Why should I use this template?
 Instructions
 -----	
 1) Create “Class Library” in Visual Studio and add the code you want to be in your library.
+
 2) Copy the following from Template folder to root folder of your project:
 	Files: ”.gitignore”, “appveyor.yml” , “LICENCE”, “README.md” 
+	
 3) Create new empty repository on github. Note repository’s URL for the next couple steps.
+
 4) Create YourProjectName.nuspec file in the root folder and add the following:
+
 ```xml
 <?xml version="1.0"?>
 <package>
@@ -66,8 +70,9 @@ git remote add origin YourGithubURL
 git push origin master
 
 ```
+7) Login in [AppVeyor](https://ci.appveyor.com/login) with GitHub credentials. (allow it to access your repositories)
 
-
+8) 
 
 Credits
 -------
