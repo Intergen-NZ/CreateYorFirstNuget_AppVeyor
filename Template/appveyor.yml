@@ -4,33 +4,22 @@ platform: Any CPU
 
 environment:
   Private_Nuget_Server_Repo_URL:
-    secure: xxxxxx
+    secure: XXXXXX
   Private_Nuget_Server_URL:
-    secure: xxxxxx
+    secure: XXXXXX
   Private_Nuget_API_Key:
-    secure: xxxxxx
+    secure: XXXXXX
 
 before_build:
-- ps: >-
-    nuget update -Self
-
-    nuget restore -source "$env:Private_Nuget_Server_Repo_URL;https://www.nuget.org/api/v2" -Verbosity detailed
+- ps: .\Scripts\before_build.ps1
 
 build:
-  project: TestNuget3.sln
+  project: PojectName.sln
   verbosity: normal
 
 after_build:
-- ps: >-
-    [string](Get-Content *\*\AssemblyInfo.cs) -match 'AssemblyVersion\(\"([0-9]+.[0-9]+.)[0-9]+.[0-9]+\"\)'
-
-    $version = $matches[1]
-
-    $nuspecFile = (Get-ChildItem *.nuspec).Name
-
-    (Get-Content $nuspecFile) | Foreach-Object {$_ -replace "(<version>).*(<\/version>)", "`${1}$version$env:APPVEYOR_BUILD_NUMBER.0`${2}" } | Set-Content $nuspecFile
-
-    nuget pack $nuspecFile
+- ps: .\Scripts\after_build.ps1
+    
 
 artifacts:
 - path: '*.nupkg'
