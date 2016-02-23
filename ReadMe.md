@@ -20,7 +20,8 @@ Instructions
 1) Create “Class Library” in Visual Studio and add the code you want to be in your library.
 
 2) Copy the following from Template folder to root folder of your project:
-	Files: ”.gitignore”, “appveyor.yml” , “LICENCE”, “README.md” 
+- Folder: "Scripts"
+- Files: ”.gitignore”, “appveyor.yml” , “LICENCE”, “README.md” 
 	
 3) Create new empty repository on github. Note repository’s URL for the next couple steps.
 
@@ -75,7 +76,14 @@ git push origin master
 8) Add Repository to AppVeyor.
 ![image](ReadMe_Images/AddRepositoryToAppVeyor.gif)
 
-9) 
+9) Using [AppVeyor's encryption tool](https://ci.appveyor.com/tools/encrypt) encrypt all your private variables and insert them in your appveyor.yml file. Also set public variables and set your solution file name in build section. 
+
+10) Push updated files to repository and that should your first build.
+![image](ReadMe_Images/StartOfTheBuild.PNG)
+
+11) If everything has been setup correctly your build succeeds and your NuGet gets published.
+
+
 
 Credits
 -------
