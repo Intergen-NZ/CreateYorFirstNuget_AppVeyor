@@ -76,13 +76,15 @@ git push origin master
 8) Add Repository to AppVeyor.
 ![image](ReadMe_Images/AddRepositoryToAppVeyor.gif)
 
-9) Using [AppVeyor's encryption tool](https://ci.appveyor.com/tools/encrypt) encrypt all your private variables and insert them in your appveyor.yml file. Also set public variables and set your solution file name in build section. 
+9) Using [AppVeyor's encryption tool](https://ci.appveyor.com/tools/encrypt) encrypt all your private variables in your appveyor.yml file. Also set public variables and set your solution file name in build section. 
 
 10) Push updated files to repository and that should your first build.
 ![image](ReadMe_Images/StartOfTheBuild.PNG)
 
-11) If everything has been setup correctly your build succeeds and your NuGet gets published.
+11) If everything has been setup correctly your build succeeds and your NuGet gets published. Congratulations!
 ![image](ReadMe_Images/BuildSucceded.PNG)
+
+Note: If your build fails look through the generated log file. Usually errors are self-explanatory.
 
 
 Credits
