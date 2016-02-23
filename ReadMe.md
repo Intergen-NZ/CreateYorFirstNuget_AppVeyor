@@ -17,11 +17,11 @@ Why should I use this template?
 
 Instructions
 -----	
-	1) Create “Class Library” in Visual Studio and add the code you want to be in your library.
-	2) Copy the following from Template folder to root folder of your project:
-		Files: ”.gitignore”, “appveyor.yml” , “LICENCE”, “README.md” 
-	3) Create new empty repository on github. Note repository’s URL for the next couple steps.
-	4) Create YourProjectName.nuspec file in the root folder and add the following:
+1) Create “Class Library” in Visual Studio and add the code you want to be in your library.
+2) Copy the following from Template folder to root folder of your project:
+	Files: ”.gitignore”, “appveyor.yml” , “LICENCE”, “README.md” 
+3) Create new empty repository on github. Note repository’s URL for the next couple steps.
+4) Create YourProjectName.nuspec file in the root folder and add the following:
 ```xml
 <?xml version="1.0"?>
 <package>
@@ -50,15 +50,15 @@ Instructions
     </files>
 </package>
 ```
-	5) Replace information in tags with project spesific one.
-		* Add dependencies if your project requires them, otherwise comment out dependency tag. 
-		  You can find dependencies in “packages.config”. 
-		* Make sure to read Licence file and sign it at the end (line 189) or pick a licence that suits your needs.
-		* Intergen use: Do not modify Owners, LicenseUrl, IconUrl, Copyright. Licence is already signed.
-	
-	6) Follow these [GitHub Instructions](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) to push local repository to git repository **or** execute the following commands:
+5) Replace information in tags with project spesific one.
+- Add dependencies if your project requires them, otherwise comment out dependency tag. 
+  You can find dependencies in “packages.config”. 
+- Make sure to read Licence file and sign it at the end (line 189) or pick a licence that suits your needs.
+- Intergen use: Do not modify Owners, LicenseUrl, IconUrl, Copyright. Licence is already signed.
 
-```git
+6) Follow these [GitHub Instructions](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) to push local repository to git repository **or** execute the following commands:
+
+```
 git init
 git add .
 git commit -m "Created project"
