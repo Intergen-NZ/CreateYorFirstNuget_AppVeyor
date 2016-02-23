@@ -72,7 +72,10 @@ git push origin master
 ```
 7) Login in [AppVeyor](https://ci.appveyor.com/login) with GitHub credentials. (allow it to access your repositories)
 
-8) 
+8) Add Repository to AppVeyor.
+![image](ReadMe_Images/AddRepositoryToAppVeyor.gif)
+
+9) 
 
 Credits
 -------
