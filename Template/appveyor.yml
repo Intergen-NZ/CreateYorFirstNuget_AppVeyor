@@ -27,7 +27,7 @@ before_build:
 - ps: .\Scripts\before_build.ps1
 
 build:
-  project: PojectName.sln
+  project: ProjectName.sln
   verbosity: normal
 
 after_build:
