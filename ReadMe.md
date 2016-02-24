@@ -55,7 +55,7 @@ Instructions
     </files>
 </package>
 ```
-5) Replace information in tags with project spesific one.
+5) Replace information in tags with project specific one.
 - Add dependencies if your project requires them, otherwise comment out dependency tag. 
   You can find dependencies in “packages.config”. 
 - Make sure to read Licence file and sign it at the end (line 189) or pick a licence that suits your needs.
@@ -78,7 +78,7 @@ git push origin master
 
 9) Using [AppVeyor's encryption tool](https://ci.appveyor.com/tools/encrypt) encrypt all your private variables in your appveyor.yml file. Also set public variables and set your solution file name in build section. 
 
-10) Push updated files to repository and that should your first build.
+10) Push updated files to repository and that should start a new build.
 ![image](ReadMe_Images/StartOfTheBuild.PNG)
 
 11) If everything has been setup correctly your build succeeds and your NuGet gets published. Congratulations!

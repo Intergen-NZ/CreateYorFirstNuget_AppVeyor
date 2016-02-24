@@ -2,7 +2,7 @@ echo "Deploying Nuget"
 $Status = 0;
 Try{
     if($env:Is_Uploading_Nuget_To_Public_Serever.ToLower() -eq "true"){
-        nuget push *.nupkg $env:ublic_Nuget_API_Key
+        nuget push *.nupkg $env:Public_Nuget_API_Key
     }
 }
 Catch{
